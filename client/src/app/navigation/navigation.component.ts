@@ -18,14 +18,5 @@ export class NavigationComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.loadAllUsers();
-    }
-
-    deleteUser(_id: string) {
-        this.userService.delete(_id).subscribe(() => { this.loadAllUsers() });
-    }
-
-    private loadAllUsers() {
-        this.userService.getAll().subscribe(users => { this.users = users; });
-    }
+    }    
 }
